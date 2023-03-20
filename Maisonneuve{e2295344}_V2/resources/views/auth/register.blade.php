@@ -29,20 +29,22 @@
                     </select>
                     </div>
                     <div class="form-outline mb-4">
-
-                  <input type="text" id="username" class="form-control form-control-lg" />
-                  <label class="form-label" for="username">username</label>
+                    <label for="username">username</label>
+                  <input type="text" name="username" id="username" class="form-control form-control-lg" />
+                  
                 </div>
         
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="password">Password</label>
+                <label for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                 
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password_confirmation" class="form-control form-control-lg" />
-                  <label class="form-label" for="password_confirmation">Repeat your password</label>
+                <label  for="password_confirmation">Repeat your password</label>
+                  <input type="password" name="password_confirmation"  id="password_confirmation" class="form-control form-control-lg" />
+                  
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
