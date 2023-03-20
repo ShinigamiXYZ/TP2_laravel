@@ -40,4 +40,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+/* 
+*Définit une relation HasOne entre le modèle actuel et le modèle "User".
+* La fonction permet de récupérer l'étudiant associé à l'utilisateur en question.
+* https://laravel.com/docs/10.x/eloquent-relationships#has-one-of-many
+*/
+
+    public function student()
+    {
+        return $this->hasOne(Student::class, 'users_id', 'id');
+    }
 }
