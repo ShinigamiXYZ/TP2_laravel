@@ -18,4 +18,8 @@ class UserController extends Controller
 
         return view('auth.register', ['students'=>$students]);
     }
+
+    public function createAccount(){
+        dd('created');
+    }
 }

@@ -4,9 +4,13 @@
 <!-- contenue -->
 
 
-
 <section class="vh-100"
  >
+
+ 
+<form method="POST">
+        @csrf
+        @method('PUT')
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -49,7 +53,7 @@
                 </div> <!-- modifiier plus tard -->
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
+                  <button type="submit"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
 
@@ -64,7 +68,10 @@
       </div>
     </div>
   </div>
+  
 </section>
+
+
 
 <!-- <///// contenue -->
 @endsection

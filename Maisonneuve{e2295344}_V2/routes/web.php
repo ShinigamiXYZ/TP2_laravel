@@ -24,4 +24,5 @@ Route::get('edit/{studentId}', [StudentController::class, 'edit'])->name('main.e
 Route::put('edit/{studentId}', [StudentController::class, 'update'])->name('main.update');
 Route::delete('edit/{studentId}', [StudentController::class, 'destroy'])->name('main.delete'); 
 Route::get('/register', [UserController::class, 'register'])->name('auth.register');
+Route::put('/register', [Usercontroller::class, 'createAccount'])->name('aut.createacc');
 Route::get('/login', [UserController::class, 'login'])->name('auth.login');
