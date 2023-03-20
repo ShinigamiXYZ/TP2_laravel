@@ -1,7 +1,7 @@
 # TP2_laravelCRUD
 
 
-## Inspirer du  TP1 
+## Inspirer du  TP1  
 
 ### ajout des fonctionnalités suivantes :
 
