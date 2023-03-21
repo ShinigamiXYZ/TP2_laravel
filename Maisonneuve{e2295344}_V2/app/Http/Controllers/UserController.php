@@ -28,8 +28,8 @@ class UserController extends Controller
 
         $validations = [
             'fullname' => 'required',
-            'username' => 'required',
-            'password' => 'required|confirmed' /* valide que les deux inputs sont identiques */
+            'username' => 'required|alpha_num|min:5|max:20',
+            'password' => 'required|min:8|max:25|confirmed|' /* valide que les deux inputs sont identiques */
             
         ];
 

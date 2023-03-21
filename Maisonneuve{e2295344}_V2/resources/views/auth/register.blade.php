@@ -23,22 +23,26 @@
               <label for="fullname">Your name</label>
               <select name="fullname" id="fullname" class="form-control form-control-lg">]
               @foreach($students as $student)
-                 <option value="{{ $student->id }}">{{ $student->name }}</option>
+              <option value="{{ $student->id }}" {{ old('fullname') == $student->id ? 'selected' : '' }}>{{ $student->name }}</option>
 
                 @endforeach
                     </select>
                     </div>
                     <div class="form-outline mb-4">
                     <label for="username">username</label>
-                  <input type="text" name="username" id="username" class="form-control form-control-lg" />
-                  
+                  <input type="text" name="username" id="username" class="form-control form-control-lg" value="{{ old('username') }}"> 
+                  @error('username')
+            <div class="text-danger">{{ $message }}</div> <!-- Affiche le message d'erreur personnaliser en lien avec la validations creer dans studentController -->
+        @enderror
                 </div>
         
 
                 <div class="form-outline mb-4">
                 <label for="password">Password</label>
                   <input type="password" name="password" id="password" class="form-control form-control-lg" />
-                 
+                  @error('password')
+            <div class="text-danger">{{ $message }}</div> <!-- Affiche le message d'erreur personnaliser en lien avec la validations creer dans studentController -->
+        @enderror
                 </div>
 
                 <div class="form-outline mb-4">
