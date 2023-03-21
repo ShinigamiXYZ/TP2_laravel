@@ -62,12 +62,12 @@ class UserController extends Controller
      
 
         if(Auth::attempt($data)){ /* Methode facade Auth */
-         // Add user ID to the session
+       
          session(['user_id' => Auth::user()->id]);
-         // Return redirect to index with success message
+    
          return redirect('/student')->with('success', 'You have been successfully logged in.');
      } else{
-         // Return back to login page with error message
+     
          return back()->withErrors(['message' => 'Invalid credentials. Please try again.']);
      }
 
