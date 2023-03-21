@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Town;
@@ -45,5 +46,23 @@ class UserController extends Controller
         $student->save();
 
        
+    }
+
+
+    public function auth(Request $request){
+        $data = $request->only(['username', 'password']);
+     
+
+        if(Auth::attempt($data)){ /* Methode facade Auth */
+         
+            dd('passed');
+        }
+        else{
+         
+            dd('failed');
+        };
+
+
+     
     }
 }

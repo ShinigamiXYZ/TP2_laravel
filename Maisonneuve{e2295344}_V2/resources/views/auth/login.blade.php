@@ -4,10 +4,13 @@
 <!-- contenue -->
 
 
-<section class="vh-100"
+
  >
-  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div class="container h-100">
+ <form method="POST" >
+        @csrf
+        @method('PUT')
+
+    <div class="container h-100 ">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
@@ -16,25 +19,18 @@
 
                     <div class="form-outline mb-4">
 
-                  <input type="text" id="username" class="form-control form-control-lg" />
+                  <input type="text" name='username' id="username" class="form-control form-control-lg" />
                   <label class="form-label" for="username">username</label>
                 </div>
         
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control form-control-lg" />
+                  <input type="password" name='password' id="password" class="form-control form-control-lg" />
                   <label class="form-label" for="password">Password</label>
                 </div>
 
-                <div class="form-outline mb-4">
-                  <input type="password" id="password_confirmation" class="form-control form-control-lg" />
-                  <label class="form-label" for="password_confirmation">Repeat your password</label>
-                </div>
-
-            
-
                 <div class="d-flex justify-content-center">
-                  <button type="button"
+                  <button type="sumbit"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">log in</button>
                 </div>
 
@@ -47,9 +43,9 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+     </div>
+
+
 
 <!-- <///// contenue -->
 @endsection

@@ -26,3 +26,4 @@ Route::delete('edit/{studentId}', [StudentController::class, 'destroy'])->name('
 Route::get('/register', [UserController::class, 'register'])->name('auth.register');
 Route::put('/register', [Usercontroller::class, 'createAccount'])->name('aut.createacc');
 Route::get('/login', [UserController::class, 'login'])->name('auth.login');
+Route::put('/login', [UserController::class, 'auth'])->name('auth.credentials');
