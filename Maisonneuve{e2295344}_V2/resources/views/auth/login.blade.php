@@ -24,7 +24,15 @@
               <h2 class="text-uppercase text-center mb-5">Log in</h2>
 
                     <div class="form-outline mb-4">
-
+                    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                   <input type="text" name='username' id="username" class="form-control form-control-lg" />
                   <label class="form-label" for="username">username</label>
                 </div>
