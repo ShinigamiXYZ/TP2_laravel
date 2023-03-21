@@ -39,6 +39,10 @@
 
   </div>
 </nav>
+<div class='d-flex flex-row-reverse '>
+<a href="{{ url()->current() }}?lang=en" class="btn btn-outline-dark text-white">English</a>
+<a href="{{ url()->current() }}?lang=fr" class="btn btn-outline-dark text-white">francais</a>
+</div>
 
 
 </header>
