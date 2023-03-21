@@ -14,9 +14,33 @@
     <header class="bg-primary text-white py-3">
   
         
-  <div class="text-start px-md-3">
-    <a href="/" class='text-white text-decoration-none '><h1 >New house chat</h1></a>
+    <nav class="navbar navbar-expand-md navbar-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">NewHouse chat</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    @if(session()->has('user_id'))
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/student">Student List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/create">Create student</a>
+        </li>
+      </ul>
+      <div>
+        <a href="/" class="btn btn-outline-dark text-white">Logout</a>
+      </div>
+    </div>
+ @endif
+
   </div>
+</nav>
+
+
 </header>
 
     @yield('content')

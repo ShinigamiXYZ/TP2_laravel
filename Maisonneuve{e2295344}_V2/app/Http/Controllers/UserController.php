@@ -20,7 +20,7 @@ class UserController extends Controller
     
     session()->forget('user_id');
    
-    Auth::logout(); /* Si on retourne a la page de login , ont sort de la session */
+    Auth::logout(); /* Si on retourne a la page de login , ont sort de la session */    
 }
         return view('auth.login');
     }
