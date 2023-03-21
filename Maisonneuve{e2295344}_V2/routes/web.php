@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 Route::get('/', [UserController::class, 'login'])->name('auth.login');
 Route::put('/login', [UserController::class, 'auth'])->name('auth.credentials');
 Route::get('/register', [UserController::class, 'register'])->name('auth.register');
-Route::put('/register', [Usercontroller::class, 'createAccount'])->name('aut.createacc');
+Route::put('/register', [Usercontroller::class, 'createAccount'])->name('auth.createacc');
 
 Route::get('/student', [StudentController::class, 'index'])->name('main.index')->middleware('auth');
 Route::get('/create', [StudentController::class, 'create'])->name('main.create')->middleware('auth');

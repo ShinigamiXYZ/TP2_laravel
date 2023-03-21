@@ -11,9 +11,10 @@
         @method('PUT')
 
     <div class="container h-100 ">
-    @if (session('message'))
-    <div class="alert alert-danger">
-        {{ session('message') }}
+    @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        <strong>{{session('success')}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
       <div class="row d-flex justify-content-center align-items-center h-100">

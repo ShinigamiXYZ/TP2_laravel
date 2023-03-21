@@ -45,6 +45,8 @@ class UserController extends Controller
         $student->user()->associate($user);
         $student->save();
 
+        return redirect(route('auth.login'))->withSuccess('Account created successfully.'); 
+
        
     }
 
@@ -55,11 +57,11 @@ class UserController extends Controller
 
         if(Auth::attempt($data)){ /* Methode facade Auth */
          
-            dd('passed');
+            /* dd('passed'); */
         }
         else{
          
-            dd('failed');
+           /*  dd('failed'); */
         };
 
 
