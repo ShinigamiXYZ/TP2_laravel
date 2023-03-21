@@ -14,16 +14,16 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [UserController::class, 'login'])->name('auth.login');
+Route::put('/login', [UserController::class, 'auth'])->name('auth.credentials');
+Route::get('/register', [UserController::class, 'register'])->name('auth.register');
+Route::put('/register', [Usercontroller::class, 'createAccount'])->name('aut.createacc');
 
-
-Route::get('/', [StudentController::class, 'index'])->name('main.index');
+Route::get('/student', [StudentController::class, 'index'])->name('main.index');
 Route::get('/create', [StudentController::class, 'create'])->name('main.create');
 Route::put('/create', [StudentController::class, 'store'])->name('main.store');
 Route::get('student/{studentId}', [StudentController::class, 'show'])->name('main.show');
 Route::get('edit/{studentId}', [StudentController::class, 'edit'])->name('main.edit');
 Route::put('edit/{studentId}', [StudentController::class, 'update'])->name('main.update');
 Route::delete('edit/{studentId}', [StudentController::class, 'destroy'])->name('main.delete'); 
-Route::get('/register', [UserController::class, 'register'])->name('auth.register');
-Route::put('/register', [Usercontroller::class, 'createAccount'])->name('aut.createacc');
-Route::get('/login', [UserController::class, 'login'])->name('auth.login');
-Route::put('/login', [UserController::class, 'auth'])->name('auth.credentials');
+
