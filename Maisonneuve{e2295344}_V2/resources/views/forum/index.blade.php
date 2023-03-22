@@ -5,7 +5,7 @@
 
 
 
-<h1>forum</h1>
+<h1 class='text-center'>forum</h1>
 
 
 

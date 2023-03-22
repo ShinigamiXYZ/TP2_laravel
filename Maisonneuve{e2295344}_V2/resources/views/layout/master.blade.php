@@ -22,7 +22,7 @@
     </button>
 
     @if(session()->has('user_id'))
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link text-white" href="/student">Student List</a>
