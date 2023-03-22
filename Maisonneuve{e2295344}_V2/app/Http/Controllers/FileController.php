@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\File;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
@@ -9,8 +10,10 @@ class FileController extends Controller
 {
     public function index()
     {
+        $users = User::all();
         $files = File::all();
-        return view('files.index', compact('files'));
+        $files = File::simplePaginate(2);      
+        return view('files.index', compact('files', 'users'));
     }
 
     public function create()

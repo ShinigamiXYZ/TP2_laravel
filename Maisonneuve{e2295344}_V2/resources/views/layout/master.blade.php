@@ -35,6 +35,9 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="/publish">publish</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/files">documents</a>
+        </li>
 
       </ul>
       <div>
