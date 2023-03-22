@@ -13,7 +13,7 @@
     <body>
     <header class="bg-primary text-white py-3">
   
-        
+    @use Illuminate\Support\Facades\Auth
     <nav class="navbar navbar-expand-md navbar-light ">
   <div class="container-fluid">
     <a class="navbar-brand text-white" href="#">NewHouse chat</a>

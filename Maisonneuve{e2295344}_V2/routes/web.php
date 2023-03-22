@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,6 @@ Route::get('/publish', [ForumController::class, 'create'])->name('forum.create')
 Route::put('/publish', [ForumController::class, 'store'])->name('forum.create')->middleware('auth');
 
 
-
+Route::get('/files', [FileController::class, 'index'])->name('files.index');
+Route::get('/files/create', [FileController::class, 'create'])->name('files.create');
+Route::put('/files', [FileController::class, 'store'])->name('files.store');
