@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
-use App\Models\Student;
 
+use App\Models\Student;
 use App\Models\Forum;
+use App\Models\Comment;
 
 class ForumController extends Controller
 {
@@ -45,4 +46,25 @@ class ForumController extends Controller
         //Rediriger vers la page principale du forum 
         return redirect()->route('forum.index');
     }
+
+
+    public function addcomment(Request $request)
+    {
+        $request->validate([
+            'forum_id' => 'required|exists:forums,id',
+            'content' => 'required',
+        ]);
+
+        // Assuming the user is logged in and user_id is available
+        $user_id = auth()->user()->id;
+
+        Comment::create([
+            'forum_id' => $request->forum_id,
+            'user_id' => $user_id,
+            'content' => $request->content,
+        ]);
+        
+        return redirect()->back()->with('success', 'Comment added successfully!');
+}
+
 }
