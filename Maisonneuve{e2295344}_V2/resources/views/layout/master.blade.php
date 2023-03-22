@@ -30,6 +30,10 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="/create">Create student</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/forum">Forum</a>
+        </li>
+
       </ul>
       <div>
         <a href="/" class="btn btn-outline-dark text-white">Logout</a>

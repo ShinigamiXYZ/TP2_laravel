@@ -65,7 +65,7 @@ class UserController extends Controller
        
          session(['user_id' => Auth::user()->id]);
     
-         return redirect('/student')->with('success', 'You have been successfully logged in.');
+         return redirect('/forum')->with('success', 'You have been successfully logged in.');
      } else{
      
          return back()->withErrors(['message' => 'Invalid credentials. Please try again.']);

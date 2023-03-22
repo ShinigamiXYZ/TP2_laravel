@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ForumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,6 @@ Route::get('student/{studentId}', [StudentController::class, 'show'])->name('mai
 Route::get('edit/{studentId}', [StudentController::class, 'edit'])->name('main.edit')->middleware('auth');
 Route::put('edit/{studentId}', [StudentController::class, 'update'])->name('main.update')->middleware('auth');
 Route::delete('edit/{studentId}', [StudentController::class, 'destroy'])->name('main.delete')->middleware('auth'); 
+
+Route::get('/forum', [ForumController::class, 'index'])->name('forum.index')->middleware('auth');
 
