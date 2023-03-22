@@ -13,9 +13,10 @@ use App\Models\Forum;
 class ForumController extends Controller
 {
     public function index()
+
     {
-            //Récupérer tous les posts du forum
-            $posts = Forum::all();
+            //Récupérer tous les posts du forum avec les commentaires associées
+            $posts = Forum::with('comments');
 
             //Paginer les résultats récupérés, avec 15 enregistrements par page
             $posts= Forum::simplePaginate(15);
