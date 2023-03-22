@@ -28,6 +28,7 @@ class FileController extends Controller
         $fileName = $uploadedFile->getClientOriginalName();
         $filePath = $uploadedFile->store('uploads', 'uploads');
     
+    
         $file = File::create([
             'name' => $fileName,
             'file_path' => $filePath,
@@ -35,6 +36,20 @@ class FileController extends Controller
         ]);
     
         return redirect()->route('files.index');
+    }
+
+    public function destroy(File $file, Request $request)
+    {
+       // Récupérer le fichier avec l'id spécifié
+       $file = File::find($request->id);      
+       // Supprimer le fichier  avec l'id spécifié
+       $file::destroy([$request->id]);    
+    
+        $file->delete();
+    
+       
+        return redirect()->route('files.index')
+                         ->with('success', 'File deleted successfully.');
     }
 
   

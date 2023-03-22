@@ -42,7 +42,49 @@
 <a href="#" class="btn btn-success">Download</a>
 
 @if ($file->user_id == Auth::id())
-<a href="#" class="btn btn-danger">deleter</a>
+<!-- delete  -->
+<form method="POST">
+            @csrf
+            @method('DELETE')
+            <div class="d-none">
+            <label for="name">Id</label>
+                <input type="text" class="form-control" id="id" name="id" value="{{ $file->id }}">
+            </div>
+            
+
+            <!-- 
+    MODAL - BOOTSTRAP - DeleteCONFIRMATION
+
+ -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
+  delete
+</button>
+ </div>
+
+<!-- Modal -->
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteLabel">Confirmation de changements</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Voulez-vous vraiment supprimer ce document?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- END </ MODAL - Delete CONFIRMATION -->
+<!-- </// delete -->
 @endif
 </td>
 </tr>

@@ -38,3 +38,4 @@ Route::put('/publish', [ForumController::class, 'store'])->name('forum.create')-
 Route::get('/files', [FileController::class, 'index'])->name('files.index');
 Route::get('/files/create', [FileController::class, 'create'])->name('files.create');
 Route::put('/files', [FileController::class, 'store'])->name('files.store');
+Route::delete('files', [FileController::class, 'destroy'])->name('main.delete')->middleware('auth'); 
