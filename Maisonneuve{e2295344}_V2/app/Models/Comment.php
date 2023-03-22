@@ -15,6 +15,9 @@ class Comment extends Model
     ];
 
 
-
+    public function forum()
+    {
+        return $this->belongsTo(Forum::class);
+    }
 
 }
