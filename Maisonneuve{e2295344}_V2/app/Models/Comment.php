@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Forum extends Model
+class Comment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
+        'forum_id',
+        'user_id',
         'content',
-        'user_id'
     ];
 
 
