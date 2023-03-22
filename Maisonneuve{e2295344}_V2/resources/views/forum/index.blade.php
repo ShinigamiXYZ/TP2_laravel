@@ -9,7 +9,7 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         @foreach ($postlists as $post)
         <div class="col">
-      
+
             <div class="card h-100 shadow-sm border-0 rounded">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $post->title }}</h5>
@@ -24,12 +24,12 @@
                 @foreach ($post->comments as $comment)
                 <li class="list-group-item">
                     <strong>
-                        
-                    @foreach ($students as $student)
-    @if ($student->users_id == $comment->user_id)
-        <strong>{{ $student->name }}</strong>
-    @endif
-@endforeach
+
+                        @foreach ($students as $student)
+                        @if ($student->users_id == $comment->user_id)
+                        <strong>{{ $student->name }}</strong>
+                        @endif
+                        @endforeach
 
                     </strong> {{ $comment->content }}
                     <small class="xs text-muted">{{ $comment->created_at->diffForHumans() }}</small>
@@ -53,7 +53,7 @@
         @endforeach
     </div>
 
-  
+
 </div>
 
 
