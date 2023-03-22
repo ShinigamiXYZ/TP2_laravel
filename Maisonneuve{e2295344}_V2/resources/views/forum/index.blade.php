@@ -4,6 +4,7 @@
 <!-- contenue -->
 
 <div class="container">
+
     <h1 class="text-center py-4">Forum</h1>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -55,7 +56,7 @@
 
 
 </div>
-
+<div>{{$postlists}}</div>
 
 
 <!-- <///// contenue -->
