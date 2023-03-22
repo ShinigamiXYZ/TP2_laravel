@@ -30,4 +30,5 @@ Route::delete('edit/{studentId}', [StudentController::class, 'destroy'])->name('
 
 Route::get('/forum', [ForumController::class, 'index'])->name('forum.index')->middleware('auth');
 Route::get('/publish', [ForumController::class, 'create'])->name('forum.create')->middleware('auth');
+Route::put('/publish', [ForumController::class, 'store'])->name('forum.create')->middleware('auth');
 

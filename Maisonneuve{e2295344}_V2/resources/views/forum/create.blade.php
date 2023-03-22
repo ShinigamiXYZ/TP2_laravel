@@ -11,7 +11,8 @@
             <h2 class='text-center'>Create Post</h2>
 
             <form  method="POST">
-               
+            @csrf
+          @method('PUT')
                 
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
