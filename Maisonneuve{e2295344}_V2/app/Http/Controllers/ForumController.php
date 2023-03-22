@@ -16,14 +16,18 @@ class ForumController extends Controller
     public function index()
 
     {
+          //Récupérer tous les étudiants
+            $studentlist = Student::All();
+
+          $posts = Forum::with('comments');
             //Récupérer tous les posts du forum avec les commentaires associées
             $posts = Forum::with('comments');
 
-            //Paginer les résultats récupérés, avec 15 enregistrements par page
-            $posts= Forum::simplePaginate(15);
+            //Paginer les résultats récupérés, avec 3 enregistrements par page
+            $posts= Forum::simplePaginate(3);
 
             //Renvoyer la vue 'forum.index' avec la liste des posts récupérés
-            return view('forum.index', ['postlists' => $posts]);
+            return view('forum.index', ['postlists' => $posts, 'students'=>$studentlist]);
     }
 
     public function create()
