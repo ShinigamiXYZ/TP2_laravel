@@ -9,8 +9,16 @@
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         @foreach ($postlists as $post)
-        <div class="col">
+        <div class="col p-2">
+            <small class="text-muted">
+            @foreach ($students as $student)
+                        @if ($student->users_id == $post->user_id)
+                       {{ $student->name }}
+                        @endif
+                        @endforeach
 
+
+            </small>
             <div class="card h-100 shadow-sm border-0 rounded">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $post->title }}</h5>
