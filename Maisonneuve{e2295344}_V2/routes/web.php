@@ -33,3 +33,5 @@ Route::put('/forum', [ForumController::class, 'addcomment'])->name('forum.index'
 Route::get('/publish', [ForumController::class, 'create'])->name('forum.create')->middleware('auth');
 Route::put('/publish', [ForumController::class, 'store'])->name('forum.create')->middleware('auth');
 
+
+
