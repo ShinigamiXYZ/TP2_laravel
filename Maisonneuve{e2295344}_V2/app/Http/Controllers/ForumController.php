@@ -11,7 +11,9 @@ use App\Models\Forum;
 class ForumController extends Controller
 {
     public function index(){
-        return view('forum.index');
+        $posts = Forum::all();
+        $posts= Forum::simplePaginate(15);  // Paginer les résultats récupérés, avec 15 enregistrements par page
+        return view('forum.index', ['postlists' => $posts]);
     }
 
     public function create(){
