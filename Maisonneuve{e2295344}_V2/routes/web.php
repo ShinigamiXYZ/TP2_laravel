@@ -5,6 +5,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\LocalisationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,5 @@ Route::get('/files', [FileController::class, 'index'])->name('files.index');
 Route::get('/files/create', [FileController::class, 'create'])->name('files.create');
 Route::put('/files', [FileController::class, 'store'])->name('files.store');
 Route::delete('files', [FileController::class, 'destroy'])->name('main.delete')->middleware('auth'); 
+
+Route::get('lang/{locale}', [LocalisationController::class, 'index'])->name('lang');
