@@ -34,13 +34,13 @@
     </div>
 @endif
                   <input type="text" name='username' id="username" class="form-control form-control-lg" />
-                  <label class="form-label" for="username">username</label>
+                  <label class="form-label" for="username">@lang('base.username')</label>
                 </div>
         
 
                 <div class="form-outline mb-4">
                   <input type="password" name='password' id="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="password">Password</label>
+                  <label class="form-label" for="password">@lang('base.password')</label>
                 </div>
 
                 <div class="d-flex justify-content-center">
@@ -48,8 +48,8 @@
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">log in</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">dont have an account yet ? <a href="{{route('auth.register')}}"
-                    class="fw-bold text-body"><u>create one here</u></a></p> 
+                <p class="text-center text-muted mt-5 mb-0">@lang('base.text_no_account') <a href="{{route('auth.register')}}"
+                    class="fw-bold text-body"><u>@lang('base.text_create_one')</u></a></p> 
 
               </form>
 

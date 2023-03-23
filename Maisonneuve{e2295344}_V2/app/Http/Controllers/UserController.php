@@ -60,7 +60,7 @@ class UserController extends Controller
 
     // redirection vers la page de connexion
 
-        return redirect(route('auth.login'))->withSuccess('Account created successfully.'); 
+        return redirect(route('auth.login'))->withSuccess(trans('base.creation_success'));
 
        
     }
@@ -74,10 +74,10 @@ class UserController extends Controller
        
          session(['user_id' => Auth::user()->id]);
     
-         return redirect('/forum')->with('success', 'You have been successfully logged in.');
+         return redirect('/forum')->withSuccess(trans('auth.success'));
      } else{
      
-         return back()->withErrors(['message' => 'Invalid credentials. Please try again.']);
+         return back()->withErrors(trans('auth.failed'));
      }
 
      
