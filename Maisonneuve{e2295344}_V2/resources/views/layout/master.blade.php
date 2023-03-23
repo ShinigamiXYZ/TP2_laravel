@@ -12,7 +12,7 @@
 
     <body>
     <header class="bg-primary text-white py-3">
-  
+  <!--   <h1>{{session()->get('locale')}} </h1> -->
     <nav class="navbar navbar-expand-md navbar-light ">
   <div class="container-fluid">
     <a class="navbar-brand text-white" href="#">NewHouse chat</a>
@@ -49,8 +49,8 @@
   </div>
 </nav>
 <div class='d-flex flex-row-reverse '>
-<a href="{{ url()->current() }}?lang=en" class="btn btn-outline-dark text-white">English</a>
-<a href="{{ url()->current() }}?lang=fr" class="btn btn-outline-dark text-white">francais</a>
+<a href="{{ url()->current() }}/lang/en" class="btn btn-outline-dark text-white">English</a>
+<a href="{{ url()->current() }}/lang/fr" class="btn btn-outline-dark text-white">francais</a>
 </div>
 
 
