@@ -29,5 +29,16 @@ return [
         'content_post_placeholder' => 'Content of your post',
         'submit' => 'Submit',
     ],
+    'student' => [
+        'title' => 'Student List',
+        'add_student' => 'Add a student',
+        
+        'view_profile' => 'View Profile',
+    ],
+
+
+
+
+    
 ];
 

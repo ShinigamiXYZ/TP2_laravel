@@ -31,7 +31,14 @@ return [
         'content_post_placeholder' => 'Contenu de votre post',
         'submit' => 'Soumettre',
 
-    ]
+    ],
+
+    'student' => [
+        'title' => 'Liste des étudiants',
+        'add_student' => 'Ajouter un étudiant',
+        
+        'view_profile' => 'Voir le profil',
+    ],
 
 ];
 

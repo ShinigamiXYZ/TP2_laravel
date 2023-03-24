@@ -6,10 +6,10 @@
 
 <div class="container">
     
-<h1 class="text-center mt-5 mb-4">Student List</h1>
+<h1 class="text-center mt-5 mb-4">@lang('base.student.title')</h1>
 
 <div class="d-flex justify-content-center mb-4">
-    <a href="{{route('main.create')}}" class="btn btn-primary">Add Student</a>
+    <a href="{{route('main.create')}}" class="btn btn-primary">@lang('base.student.add_student')</a>
 </div>
 
 @if(session('success'))
@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $student->name }}</h5>
                     <p class="card-text">{{ $student->email }}</p>
-                    <a href="{{route('main.show', $student -> id )}}" class="btn btn-primary">View Profile</a>
+                    <a href="{{route('main.show', $student -> id )}}" class="btn btn-primary">@lang('base.student.view_profile')</a>
                 </div>
             </div>
         </div>
