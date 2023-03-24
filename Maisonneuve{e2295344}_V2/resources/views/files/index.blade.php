@@ -22,6 +22,8 @@
                 <div class="form-group">
                     <label for="file">Choose File</label>
                     <input type="file" name="file" class="form-control" required>
+                    <label for="file">add title</label>
+                    <input type="text" name="name" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </form>
