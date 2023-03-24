@@ -19,6 +19,15 @@ return [
         'title' => 'Forum',
         'add_comment' => 'Add a comment',
         'comment'  => 'Comment',
-    ]
+    ],
+
+    'forum_create' => [
+        'title' => 'Create a post',
+        'title_post' => 'Title',
+        'title_post_placeholder' => 'Title of your post',
+        'content_post' => 'Content',
+        'content_post_placeholder' => 'Content of your post',
+        'submit' => 'Submit',
+    ],
 ];
 

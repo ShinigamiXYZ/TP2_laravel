@@ -20,6 +20,17 @@ return [
         'title' => 'Forum',
         'add_comment' => 'Ajouter un commentaire',
         'comment'  => 'Commenter',
+    ],
+
+    'forum_create' => [ 
+
+         'title' => 'Créez un post',
+        'title_post' => 'Titre',
+        'title_post_placeholder' => 'Titre de votre post',
+        'content_post' => 'Contenu',
+        'content_post_placeholder' => 'Contenu de votre post',
+        'submit' => 'Soumettre',
+
     ]
 
 ];
