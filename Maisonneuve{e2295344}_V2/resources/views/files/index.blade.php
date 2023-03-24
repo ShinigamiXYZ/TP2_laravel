@@ -57,6 +57,63 @@
         <a href="/files/download/{{ $file->id }}" class="btn btn-success">Download</a>
 
         @if ($file->user_id == Auth::id())
+            <!-- update -->
+
+
+            <form method="POST">
+                @csrf
+                @method('POST')
+                <div class="d-none">
+                    <label for="name">Id</label>
+                    <input type="text" class="form-control" id="id" name="id" value="{{ $file->id }}">
+                </div>
+
+                <!-- 
+                MODAL - BOOTSTRAP - updateONFIRMATION
+                -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update">
+                    update
+                </button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="updateLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="updateLabel">Changement de titre<h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <label for="file">Change title</label>
+                    <input type="text" name="name" class="form-control" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-danger">update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END </ MODAL - update CONFIRMATION -->
+
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <//// update -->
             <!-- delete  -->
             <form method="POST">
                 @csrf
@@ -99,6 +156,7 @@
                 <!-- END </ MODAL - Delete CONFIRMATION -->
 
                 <!-- </// delete -->
+                </form>
             @endif
         </td>
         <td>

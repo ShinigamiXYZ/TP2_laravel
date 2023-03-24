@@ -56,5 +56,13 @@ class FileController extends Controller
                          ->with('success', 'File deleted successfully.');
     }
 
+
+    public function update(Request $request)
+    {
+        $file = File::find($request->id);
+        $file->name = $request->name;
+        $file->save();
+        return redirect()->route('files.index');
+    }
   
 }
