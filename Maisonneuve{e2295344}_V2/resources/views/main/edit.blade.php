@@ -3,7 +3,7 @@
 @section('content')
 <div class="text-center mt-2"><a href="{{route('main.show', $student -> id )}}" class="btn btn-success">Retour</a></div>
 <div class="container py-5">
-<h1 class="text-center mt-5 mb-4 ">Modififications utilisateur</h1>
+<h1 class="text-center mt-5 mb-4 ">@lang('base.student_edit.title')</h1>
   <div class="row justify-content-center">
     <div class="col-md-6">
       <form method="POST">
@@ -14,32 +14,32 @@
                 <input type="text" class="form-control" id="id" name="id" value="{{ $student->id }}">
             </div>
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">@lang('base.student_create.name')</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{ $student->name }}">
             </div>
 
             <div class="form-group">
-                <label for="address">Address:</label>
+                <label for="address">@lang('base.student_create.address')</label>
                 <input type="text" class="form-control" id="address" name="address" value="{{ $student->address }}">
             </div>
 
             <div class="form-group">
-                <label for="phone">Phone:</label>
+                <label for="phone">@lang('base.student_create.phone')</label>
                 <input type="text" class="form-control" id="phone" name="phone" value="{{ $student->phone }}">
             </div>
 
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email">@lang('base.student_create.email')</label>
                 <input type="email" class="form-control" id="email" name="email" value="{{ $student->email }}">
             </div>
 
             <div class="form-group">
-                <label for="year_of_birth">Year of Birth:</label>
+                <label for="year_of_birth">@lang('base.student_create.birthday')</label>
                 <input type="text" class="form-control" id="year_of_birth" name="year_of_birth" value="{{ $student->year_of_birth }}">
             </div>
 
             <div class="form-group">
-    <label for="town_id">Select Town:</label>
+    <label for="town_id">@lang('base.student_create.town')</label>
     <select class="form-control" id="town_id" name="town_id">
         @foreach($towns as $town)
             @if($town->id == $student->town_id)
@@ -66,17 +66,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="updateLabel">Confirmation de changements</h5>
+        <h5 class="modal-title" id="updateLabel">@lang('base.student_edit.title')</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Voulez-vous vraiment modifier les informations?
+       @lang('base.student_edit_modal.body')
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('base.student_edit_modal.close')</button>
+        <button type="submit" class="btn btn-primary">@lang('base.student_edit_modal.submit')</button>
       </div>
     </div>
   </div>

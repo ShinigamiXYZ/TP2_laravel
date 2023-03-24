@@ -54,6 +54,7 @@ return [
         'town' => 'Ville',
         'email' => 'Email',
         'email_placeholder' => 'Email de l\'étudiant',
+        'creation' => 'Création',
         'submit' => 'Submit',
     ],
 
@@ -61,7 +62,20 @@ return [
         'body' => 'Êtes-vous sûr de vouloir créer cet étudiant ?',
         'close' => 'Fermer',
         'submit' => 'Soumettre',
-    ]
+    ],
+
+    'student_edit' =>
+    [
+        'title' => 'Modifier un étudiant',
+
+    ],
+
+    'student_edit_modal' =>[
+        'update' => 'Modifier',
+        'body' => 'Êtes-vous sûr de vouloir modifier cet étudiant ?',
+        'close' => 'Fermer',
+        'submit' => 'Soumettre',
+    ],
 
 ];
 

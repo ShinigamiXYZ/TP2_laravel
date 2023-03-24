@@ -49,6 +49,7 @@ return [
         'town' => 'Town',
         'email' => 'Email',
         'email_placeholder' => 'Email of the student',
+         'creation' => 'Creation',
         'submit' => 'Submit',
     ],
 
@@ -56,7 +57,23 @@ return [
         'body' => 'Are you sure you want to create this student ?',
         'close' => 'Close',
         'submit' => 'Submit',
-    ]
+    ],
+
+    'student_edit' =>
+    [
+        'title' => 'Edit a student',
+
+    ],
+
+    'student_edit_modal' =>[
+        'update' => 'Update',
+        'body' => 'Are you sure you want to edit this student ?',
+        'close' => 'Close',
+        'submit' => 'Submit',
+    ],
+  
+
+    
 
 
 
