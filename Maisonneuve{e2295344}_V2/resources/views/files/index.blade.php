@@ -42,7 +42,7 @@
     <td>{{ $file->name }}</td>
     <td>
         <a href="#" class="btn btn-success">visualise</a>
-        <a href="#" class="btn btn-success">Download</a>
+        <a href="/files/download/{{ $file->id }}" class="btn btn-success">Download</a>
 
         @if ($file->user_id == Auth::id())
             <!-- delete  -->
