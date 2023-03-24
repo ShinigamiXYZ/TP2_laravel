@@ -23,20 +23,21 @@ class FileController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'file' => 'required|mimes:pdf,zip,doc,docx|max:2048',
-        ]);
-    
-        $uploadedFile = $request->file('file');
-        $fileName = $uploadedFile->getClientOriginalName();
-        $filePath = $uploadedFile->store('uploads', 'uploads');
-    
-    
-        $file = File::create([
-            'name' => $fileName,
-            'file_path' => $filePath,
-            'user_id' => Auth::id(),
-        ]);
+            $request->validate([
+                'file' => 'required|mimes:pdf,zip,doc,docx|max:2048',
+                'name' => 'required|max:25|unique:files,name' , /* oublige un nom unique -> plus simple que de crypter */
+            ]);
+        
+            $uploadedFile = $request->file('file'); 
+            $fileTitle = $request->input('name'); /* Creer un titre sans extension pour la BD -> pour comparer unique */
+            $fileName = $request->input('name') . '.' . $uploadedFile->getClientOriginalExtension(); /* Creer nom unique mais avec l'extension du document. (simplifie le retrieve) */
+            $filePath = $uploadedFile->storeAs('uploads', $fileName, 'uploads'); 
+        
+            $file = File::create([
+                'name' => $fileTitle,
+                'file_path' => $filePath,
+                'user_id' => Auth::id(),
+            ]);
     
         return redirect()->route('files.index');
     }
