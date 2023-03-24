@@ -40,5 +40,28 @@ return [
         'view_profile' => 'Voir le profil',
     ],
 
+
+    'student_create' =>[
+        'title' => 'Crééez un étudiant',
+        'name' => 'Nom',
+        'name_placeholder' => 'Entrez le nom de l\'étudiant',
+        'address' => 'Adresse',
+        'address_placeholder' => 'Adresse de l\'étudiant',
+        'phone' => 'Téléphone',
+        'phone_placeholder' => 'Téléphone de l\'étudiant',
+        'birthday' => 'Date de naissance',
+        'birthday_placeholder' => 'Date de naissance de l\'étudiant',
+        'town' => 'Ville',
+        'email' => 'Email',
+        'email_placeholder' => 'Email de l\'étudiant',
+        'submit' => 'Submit',
+    ],
+
+    'student_create_modal' =>[
+        'body' => 'Êtes-vous sûr de vouloir créer cet étudiant ?',
+        'close' => 'Fermer',
+        'submit' => 'Soumettre',
+    ]
+
 ];
 

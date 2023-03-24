@@ -3,7 +3,7 @@
 @section('content')
 <div class="text-center mt-2"><a href="{{route('main.index')}}" class="btn btn-success ">Retour</a></div>
 <div class="container py-5">
-<h1 class="text-center mt-5 mb-4 ">Création utilisateur</h1>
+<h1 class="text-center mt-5 mb-4 ">@lang('base.student_create.title')</h1>
   <div class="row justify-content-center">
     <div class="col-md-6">
       <form method="POST">
@@ -11,46 +11,46 @@
         @method('PUT')
 
         <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value="{{ old('name') }}"> <!-- Si la page est rediriger apres erreur , old va garder l'informations entre par l'utilisateurs -->
+        <label for="name">@lang('base.student_create.name')</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="@lang('base.student_create.name_placeholder')" value="{{ old('name') }}"> <!-- Si la page est rediriger apres erreur , old va garder l'informations entre par l'utilisateurs -->
         @error('name')
             <div class="text-danger">{{ $message }}</div> <!-- Affiche le message d'erreur personnaliser en lien avec la validations creer dans studentController -->
         @enderror
     </div>
 
     <div class="form-group">
-        <label for="address">Address:</label>
-        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" value="{{ old('address') }}">
+        <label for="address">@lang('base.student_create.address')</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="@lang('base.student_create.address_placeholder')" value="{{ old('address') }}">
         @error('address')
             <div class="text-danger">{{ $message }}</div>
         @enderror
     </div>
 
     <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" value="{{ old('phone') }}">
+        <label for="phone">@lang('base.student_create.phone')</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="@lang('base.student_create.phone_placeholder')" value="{{ old('phone') }}">
         @error('phone')
             <div class="text-danger">{{ $message }}</div>
         @enderror
     </div>
 
     <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" value="{{ old('email') }}">
+        <label for="email">@lang('base.student_create.email')</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="@lang('base.student_create.email_placeholder')" value="{{ old('email') }}">
         @error('email')
             <div class="text-danger">{{ $message }}</div>
         @enderror
     </div>
 
     <div class="form-group">
-        <label for="year_of_birth">Year of Birth:</label>
-        <input type="text" class="form-control" id="year_of_birth" name="year_of_birth" placeholder="Enter your year of birth" value="{{ old('year_of_birth') }}">
+        <label for="year_of_birth">@lang('base.student_create.birthday')</label>
+        <input type="text" class="form-control" id="year_of_birth" name="year_of_birth" placeholder="@lang('base.student_create.birthday_placeholder')" value="{{ old('year_of_birth') }}">
 @error('year_of_birth')
 <div class="text-danger">{{ $message }}</div>
 @enderror
 </div>
 <div class="form-group">
-    <label for="town_id">Select Town:</label>
+    <label for="town_id">@lang('base.student_create.town')</label>
     <select class="form-control" id="town_id" name="town_id">
         @foreach($towns as $town)
             <option value="{{ $town->id }}" {{ old('town_id') == $town->id ? 'selected' : '' }}>{{ $town->name }}</option>
@@ -83,17 +83,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="createLabel">Création étudiant</h5>
+        <h5 class="modal-title" id="createLabel">@lang('base.student_create.title')</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Voulez-vous vraiment creer un nouvel utilisateurs
+      @lang('base.student_create_modal.body')
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"> @lang('base.student_create_modal.close')</button>
+        <button type="submit" class="btn btn-primary">@lang('base.student_create_modal.submit')</button>
       </div>
     </div>
   </div>
