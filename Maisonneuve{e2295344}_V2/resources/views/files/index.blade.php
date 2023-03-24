@@ -15,17 +15,19 @@
             <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2>Upload File</h2>
+            
             <form action="#" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                <div class="form-group">
+                <div class="p-5 form-group mx-auto w-25 center">
+                <h4 class='text-center text-primary'>Upload File</h4>
                     <label for="file">Choose File</label>
                     <input type="file" name="file" class="form-control" required>
                     <label for="file">add title</label>
                     <input type="text" name="name" class="form-control" required>
+                    <button type="submit" class="btn btn-primary">Upload</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Upload</button>
+                
             </form>
         </div>
     </div>
