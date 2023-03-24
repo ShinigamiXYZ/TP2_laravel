@@ -10,7 +10,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h2 class='text-center'>File Repository</h2>
+            <h2 class='text-center'>@lang('base.files.title')</h2>
 
             <div class="container">
     <div class="row">
@@ -28,12 +28,12 @@
                 @csrf
                 @method('PUT')
                 <div class="p-5 form-group mx-auto w-25 center">
-                <h4 class='text-center text-primary'>Upload File</h4>
-                    <label for="file">Choose File</label>
+                <h4 class='text-center text-primary'>@lang('base.files.add_file')</h4>
+                    <label for="file">@lang('base.files.choose_file')</label>
                     <input type="file" name="file" class="form-control" required>
-                    <label for="file">add title</label>
+                    <label for="file">@lang('base.files.name')</label>
                     <input type="text" name="name" class="form-control" required>
-                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <button type="submit" class="btn btn-primary">@lang('base.files.upload')</button>
                 </div>
                 
             </form>
@@ -43,9 +43,9 @@
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Name</th>
-<th>Action</th>
-<th>Uploaded by </th>
+<th>@lang('base.files.name')</th>
+<th>@lang('base.files.action')</th>
+<th>@lang('base.files.uploaded_by') </th>
 </tr>
 </thead>
 <tbody>
@@ -53,8 +53,8 @@
 <tr>
     <td>{{ $file->name }}</td>
     <td>
-        <a href="#" class="btn btn-success">visualise</a>
-        <a href="/files/download/{{ $file->id }}" class="btn btn-success">Download</a>
+        <a href="#" class="btn btn-success">@lang('base.files.visualise')</a>
+        <a href="/files/download/{{ $file->id }}" class="btn btn-success">@lang('base.files.download')</a>
 
         @if ($file->user_id == Auth::id())
             <!-- update -->
@@ -74,8 +74,7 @@
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update">
-                    update
-                </button>
+                @lang('base.files.update')</button>
                 </div>
 
                 <!-- Modal -->
@@ -83,18 +82,18 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="updateLabel">Changement de titre<h5>
+                                <h5 class="modal-title" id="updateLabel">@lang('base.files.update_title')<h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                            <label for="file">Change title</label>
+                            <label for="file">@lang('base.files.update_title_placeholder')</label>
                     <input type="text" name="name" class="form-control" required>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-danger">update</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('base.files.update_submit')</button>
+                                <button type="submit" class="btn btn-danger">@lang('base.files.update_submit')</button>
                             </div>
                         </div>
                     </div>
@@ -129,7 +128,7 @@
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
-                    delete
+                    @lang('base.files.delete')
                 </button>
                 </div>
 
@@ -138,17 +137,17 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="deleteLabel">Confirmation de changements</h5>
+                                <h5 class="modal-title" id="deleteLabel">@lang('base.files.delete_modal_title')</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Voulez-vous vraiment supprimer ce document?
+                            @lang('base.files.delete_body')
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('base.files.delete_close')</button>
+                                <button type="submit" class="btn btn-danger">@lang('base.files.delete_submit')</button>
                             </div>
                         </div>
                     </div>

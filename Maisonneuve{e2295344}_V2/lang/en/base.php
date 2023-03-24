@@ -74,7 +74,37 @@ return [
     ],
     'student_show' => [
         'edit' => 'edit',
-    ]
+    ],
+
+    'files' => [
+        'title' => 'Files List',
+        'add_file' => 'Add a file',
+        'choose_file' => 'Choose a file',
+        'add_name' => 'add file title',
+        'upload' => 'Upload',
+        'name' => 'Name',
+        'action' => 'Action',
+        'uploaded_by' => 'Uploaded by',
+        'visualise' => 'visualise',
+        'download' => 'Download',
+        'update' => 'update',
+        'update_title' => 'Changement de titre',
+        'update_title_placeholder' => 'Nouveau titre',
+        'update_submit' => 'Submit',
+        'update_close' => 'Close',
+        'update_body' => 'Are you sure you want to edit this file ?',
+        'delete' => 'delete',
+        'delete_modal_title' => 'Delete file',
+        'delete_body' => 'Are you sure you want to delete this file ?',
+        'delete_close' => 'Close',
+        'delete_submit' => 'Submit',
+    ],
+
+
+
+
+
+    
 
     
 

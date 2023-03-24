@@ -80,6 +80,30 @@ return [
 
     'student_show' => [
         'edit' => 'Modifier',
+    ],
+
+    'files' => [
+        'title' => 'Documents',
+        'add_file' => 'Ajouter un document',
+        'choose_file' => 'Choisir un fichier',
+        'add_name' => 'Ajouter un nom',
+        'upload' => 'téléverser',
+        'name' => 'Nom',
+        'action' => 'Action',
+        'uploaded_by' => 'téléverser par',
+        'visualise' => 'Visualiser',
+        'download' => 'Télécharger',
+        'update' => 'Modifier',
+        'update_title' => 'Nouveau titre',
+        'update_title_placeholder' => 'Nouveau titre du fichier',
+        'update_submit' => 'modifier',
+        'update_submit' => 'Fermer',
+        'update_body' => 'Êtes-vous sûr de vouloir modifier ce fichier ?',
+        'delete' => 'Supprimer',
+        'delete_modal_title' => 'Supprimer un fichier',
+        'delete_body' => 'Êtes-vous sûr de vouloir supprimer ce fichier ?',
+        'delete_close' => 'Fermer',
+        'delete_submit' => 'supprimer',
     ]
 
 ];
