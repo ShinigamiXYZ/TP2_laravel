@@ -24,34 +24,36 @@
     <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="/student">Student List</a>
+          <a class="nav-link text-white" href="/student">@lang('base.nav.student')</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/create">Create student</a>
+          <a class="nav-link text-white" href="/create">@lang('base.nav.create_student')</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/forum">Forum</a>
+          <a class="nav-link text-white" href="/forum">@lang('base.nav.forum')</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/publish">publish</a>
+          <a class="nav-link text-white" href="/publish">@lang('base.nav.publish')</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/files">documents</a>
+          <a class="nav-link text-white" href="/files">@lang('base.nav.documents')</a>
         </li>
 
       </ul>
       <div>
-        <a href="/" class="btn btn-outline-dark text-white">Logout</a>
+        <a href="/" class="btn btn-outline-dark text-white">@lang('base.nav.logout')</a>
       </div>
     </div>
  @endif
 
   </div>
 </nav>
+@unless(session()->has('user_id'))
 <div class='d-flex flex-row-reverse '>
 <a href="{{ url()->current() }}/lang/en" class="btn btn-outline-dark text-white">English</a>
 <a href="{{ url()->current() }}/lang/fr" class="btn btn-outline-dark text-white">francais</a>
 </div>
+@endunless
 
 
 </header>

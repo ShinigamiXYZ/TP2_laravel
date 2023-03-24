@@ -42,4 +42,4 @@ Route::put('/files', [FileController::class, 'store'])->name('files.store');
 Route::delete('files', [FileController::class, 'destroy'])->name('main.delete')->middleware('auth'); 
 Route::get('files/download/{fileId}', [FileController::class, 'download'])->name('main.download')->middleware('auth'); 
 
-Route::get('lang/{locale}', [LocalisationController::class, 'index'])->name('lang');
+Route::get('lang/{locale}', [LocalisationController::class, 'index'])->name('lang'); 

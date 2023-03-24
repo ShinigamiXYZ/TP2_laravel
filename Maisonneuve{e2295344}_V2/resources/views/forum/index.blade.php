@@ -5,7 +5,7 @@
 
 <div class="container">
 
-    <h1 class="text-center py-4">Forum</h1>
+    <h1 class="text-center py-4">@lang('base.forum.title')</h1>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         @foreach ($postlists as $post)
@@ -52,11 +52,11 @@
                 <input type="hidden" name="forum_id" value="{{ $post->id }}">
 
                 <div class="form-group">
-                    <label for="content">Add Comment:</label>
+                    <label for="content">@lang('base.forum.add_comment')</label>
                     <textarea name="content" class="form-control" rows="3" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary mt-2">Comment</button>
+                <button type="submit" class="btn btn-primary mt-2">@lang('base.forum.comment')</button>
             </form>
         </div>
         @endforeach
