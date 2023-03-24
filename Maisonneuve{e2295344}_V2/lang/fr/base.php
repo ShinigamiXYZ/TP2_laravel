@@ -7,6 +7,7 @@ return [
     'text_no_account' => "Vous n'avez pas encore de compte ? ",
     'text_create_one' => 'créer en un ici',
     'success' => "Vous etes connectez",
+    'back' => 'retour',
     'creation_success' => 'compte créer avec succès',
     'nav' => [
         'student' => 'Étudiant',
@@ -76,6 +77,10 @@ return [
         'close' => 'Fermer',
         'submit' => 'Soumettre',
     ],
+
+    'student_show' => [
+        'edit' => 'Modifier',
+    ]
 
 ];
 

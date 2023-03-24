@@ -7,6 +7,7 @@ return [
     'text_no_account' => 'dont have an account yet ? ',
     'text_create_one' => 'create one here',
     'creation_success' => 'Account created successfuly',
+    'back' => 'Back',
     'nav' => [
         'student' => 'Student',
         'create_student' => 'Create Student',
@@ -71,7 +72,9 @@ return [
         'close' => 'Close',
         'submit' => 'Submit',
     ],
-  
+    'student_show' => [
+        'edit' => 'edit',
+    ]
 
     
 

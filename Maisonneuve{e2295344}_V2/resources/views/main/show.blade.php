@@ -38,7 +38,7 @@
               @endif
             @endforeach
           </div>
-          <a href="{{route('main.edit', $student->id)}}" class="btn btn-primary btn-block mt-4  py-2">Edit Profile</a>
+          <a href="{{route('main.edit', $student->id)}}" class="btn btn-primary btn-block mt-4  py-2">@lang('base.student_show.edit')</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
 
 
       <div class="d-flex justify-content-center mt-4">
-        <a href="{{route('main.index')}}" class="btn btn-success btn-lg px-5">Retour</a>
+        <a href="{{route('main.index')}}" class="btn btn-success btn-lg px-5">@lang('base.back')</a>
       </div>
     </div>
   </div>
