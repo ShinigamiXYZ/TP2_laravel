@@ -20,7 +20,7 @@
                 </div>
                 
 
-            
+                @if (app()->getLocale() == 'en')
                 <div class="mb-3">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -40,7 +40,28 @@
                     </div>
                 </div>
 
-            
+                @elseif (app()->getLocale() == 'fr')
+
+                <div class="mb-3">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="french-tab" data-bs-toggle="tab" data-bs-target="#french" type="button" role="tab" aria-controls="french" aria-selected="true">French</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="english-tab" data-bs-toggle="tab" data-bs-target="#english" type="button" role="tab" aria-controls="english" aria-selected="false">English</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="french" role="tabpanel" aria-labelledby="french-tab">
+            <textarea class="form-control" id="french_content" name="french_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+        </div>
+        <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
+            <textarea class="form-control" id="english_content" name="english_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+        </div>
+    </div>
+</div>
+
+    @endif
 
 
 
