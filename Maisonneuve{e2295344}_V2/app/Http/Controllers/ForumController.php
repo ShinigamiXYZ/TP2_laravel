@@ -44,7 +44,7 @@ class ForumController extends Controller
         //Créer un tableau forumData avec les champs 'title' et 'content' et ajouter le champ 'user_id' avec l'id de l'utilisateur connecté
         $forumData = array_merge($request->only('french_title', 'french_content', 'english_title','english_content'), ['user_id' => $user->id]);
         
-        dd($forumData);
+       
   
         //Créer un nouveau post dans le forum avec les données récupérées
         $forum = Forum::create($forumData);

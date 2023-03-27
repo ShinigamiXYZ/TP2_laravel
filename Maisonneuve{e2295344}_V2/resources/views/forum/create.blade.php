@@ -61,17 +61,19 @@
                     </div>
                 </div>
        <!-- <///  contenue en/fr -->
+
                 @elseif (app()->getLocale() == 'fr') <!-- si le site est en francais -->
-     
+     <!-- titre fr/en -->
                 <div class="mb-3">
     <label for="title" class="form-label">@lang('base.forum_create.title_post')</label>
     <ul class="nav nav-tabs" id="titleTab" role="tablist">
+    <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#french_title" type="button" role="tab" aria-controls="french_title" aria-selected="true">French</button>
+        </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#english_title" type="button" role="tab" aria-controls="english_title" aria-selected="false">English</button>
         </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#french_title" type="button" role="tab" aria-controls="french_title" aria-selected="true">French</button>
-        </li>
+       
     </ul>
     <div class="tab-content" id="titleTabContent">
         <div class="tab-pane fade" id="english_title" role="tabpanel" aria-labelledby="english-title-tab">
