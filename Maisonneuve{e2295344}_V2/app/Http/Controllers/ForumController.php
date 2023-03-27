@@ -44,7 +44,25 @@ class ForumController extends Controller
         //Créer un tableau forumData avec les champs 'title' et 'content' et ajouter le champ 'user_id' avec l'id de l'utilisateur connecté
         $forumData = array_merge($request->only('fr_title', 'fr_content', 'en_title','en_content'), ['user_id' => $user->id]);
         
-       
+        if (app()->getLocale() == 'fr') {
+            $request->validate([
+                'fr_title' => 'required_with:fr_content|string|max:30',
+                'fr_content' => 'required_with:fr_title|string|max:250',
+                'en_title' => 'nullable|string|max:30',
+                'en_content' => 'nullable|string|max:250',
+            ]);
+        } elseif (app()->getLocale() == 'en') {
+            $request->validate([
+                'en_title' => 'required_with:en_content|string|max:30',
+                'en_content' => 'required_with:en_title|string|max:250',
+                'fr_title' => 'nullable|string|max:30',
+                'fr_content' => 'nullable|string|max:250',
+            ]);
+        }
+
+        /*  Set de validation spécifique au language sélectioner */
+
+        
   
         //Créer un nouveau post dans le forum avec les données récupérées
         $forum = Forum::create($forumData);

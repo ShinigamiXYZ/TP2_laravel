@@ -10,6 +10,16 @@
         <div class="col-md-8 offset-md-2 mt-5">
             <h2 class='text-center'>@lang('base.forum_create.title')</h2>
 
+            @if ($errors->any())
+        <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
             <form  method="POST">
             @csrf
           @method('PUT')
@@ -31,10 +41,10 @@
                     </ul>
                     <div class="tab-content" id="titleTabContent">
                         <div class="tab-pane fade show active" id="en_title" role="tabpanel" aria-labelledby="english-title-tab">
-                            <input type="text" class="form-control" id="en_title_input" name="en_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                            <input type="text" class="form-control" id="en_title_input" name="en_title" placeholder="@lang('base.forum_create.title_post_placeholder')"  >
                         </div>
                         <div class="tab-pane fade" id="fr_title" role="tabpanel" aria-labelledby="french-title-tab">
-                            <input type="text" class="form-control" id="fr_title_input" name="fr_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                            <input type="text" class="form-control" id="fr_title_input" name="fr_title" placeholder="@lang('base.forum_create.title_post_placeholder')"  >
                         </div>
                     </div>
                 </div>
@@ -53,10 +63,10 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="english" role="tabpanel" aria-labelledby="english-tab">
-                            <textarea class="form-control" id="en_content" name="en_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+                            <textarea class="form-control" id="en_content" name="en_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')"  ></textarea>
                         </div>
                         <div class="tab-pane fade" id="french" role="tabpanel" aria-labelledby="french-tab">
-                            <textarea class="form-control" id="fr_content" name="fr_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+                            <textarea class="form-control" id="fr_content" name="fr_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')"  ></textarea>
                         </div>
                     </div>
                 </div>
@@ -77,10 +87,10 @@
     </ul>
     <div class="tab-content" id="titleTabContent">
         <div class="tab-pane fade" id="en_title" role="tabpanel" aria-labelledby="english-title-tab">
-            <input type="text" class="form-control" id="en_title_input" name="en_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+            <input type="text" class="form-control" id="en_title_input" name="en_title" placeholder="@lang('base.forum_create.title_post_placeholder')"  >
         </div>
         <div class="tab-pane fade show active" id="fr_title" role="tabpanel" aria-labelledby="french-title-tab">
-            <input type="text" class="form-control" id="fr_title_input" name="fr_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+            <input type="text" class="form-control" id="fr_title_input" name="fr_title" placeholder="@lang('base.forum_create.title_post_placeholder')"  >
         </div>
     </div>
 </div>
@@ -105,10 +115,10 @@
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="french" role="tabpanel" aria-labelledby="french-tab">
-            <textarea class="form-control" id="fr_content" name="fr_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+            <textarea class="form-control" id="fr_content" name="fr_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')"  ></textarea>
         </div>
         <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
-            <textarea class="form-control" id="en_content" name="en_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+            <textarea class="form-control" id="en_content" name="en_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')"  ></textarea>
         </div>
     </div>
 </div>
