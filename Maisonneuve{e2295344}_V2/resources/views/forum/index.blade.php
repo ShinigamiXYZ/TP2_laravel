@@ -21,8 +21,8 @@
             </small>
             <div class="card h-100 shadow-sm border-0 rounded">
                 <div class="card-body text-center">
-                    <h5 class="card-title">{{ $post->title }}</h5>
-                    <p class="card-text">{{ $post->content }}</p>
+                    <h5 class="card-title">{{ $post->fr_title }}</h5>
+                    <p class="card-text">{{ $post->en_content }}</p>
                 </div>
                 <div class="card-footer bg-white">
                     <small class="text-muted">{{ $post->created_at->diffForHumans() }}</small>

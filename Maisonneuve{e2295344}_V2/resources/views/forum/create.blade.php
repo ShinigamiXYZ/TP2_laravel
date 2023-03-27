@@ -23,18 +23,18 @@
                     <label for="title" class="form-label">@lang('base.forum_create.title_post')</label>
                     <ul class="nav nav-tabs" id="titleTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#english_title" type="button" role="tab" aria-controls="english_title" aria-selected="true">English</button>
+                            <button class="nav-link active" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#en_title" type="button" role="tab" aria-controls="en_title" aria-selected="true">English</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#french_title" type="button" role="tab" aria-controls="french_title" aria-selected="false">French</button>
+                            <button class="nav-link" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#fr_title" type="button" role="tab" aria-controls="fr_title" aria-selected="false">French</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="titleTabContent">
-                        <div class="tab-pane fade show active" id="english_title" role="tabpanel" aria-labelledby="english-title-tab">
-                            <input type="text" class="form-control" id="english_title_input" name="english_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                        <div class="tab-pane fade show active" id="en_title" role="tabpanel" aria-labelledby="english-title-tab">
+                            <input type="text" class="form-control" id="en_title_input" name="en_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
                         </div>
-                        <div class="tab-pane fade" id="french_title" role="tabpanel" aria-labelledby="french-title-tab">
-                            <input type="text" class="form-control" id="french_title_input" name="french_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                        <div class="tab-pane fade" id="fr_title" role="tabpanel" aria-labelledby="french-title-tab">
+                            <input type="text" class="form-control" id="fr_title_input" name="fr_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,10 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="english" role="tabpanel" aria-labelledby="english-tab">
-                            <textarea class="form-control" id="english_content" name="english_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+                            <textarea class="form-control" id="en_content" name="en_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
                         </div>
                         <div class="tab-pane fade" id="french" role="tabpanel" aria-labelledby="french-tab">
-                            <textarea class="form-control" id="french_content" name="french_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+                            <textarea class="form-control" id="fr_content" name="fr_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -68,19 +68,19 @@
     <label for="title" class="form-label">@lang('base.forum_create.title_post')</label>
     <ul class="nav nav-tabs" id="titleTab" role="tablist">
     <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#french_title" type="button" role="tab" aria-controls="french_title" aria-selected="true">French</button>
+            <button class="nav-link active" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#fr_title" type="button" role="tab" aria-controls="fr_title" aria-selected="true">French</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#english_title" type="button" role="tab" aria-controls="english_title" aria-selected="false">English</button>
+            <button class="nav-link" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#en_title" type="button" role="tab" aria-controls="en_title" aria-selected="false">English</button>
         </li>
        
     </ul>
     <div class="tab-content" id="titleTabContent">
-        <div class="tab-pane fade" id="english_title" role="tabpanel" aria-labelledby="english-title-tab">
-            <input type="text" class="form-control" id="english_title_input" name="english_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+        <div class="tab-pane fade" id="en_title" role="tabpanel" aria-labelledby="english-title-tab">
+            <input type="text" class="form-control" id="en_title_input" name="en_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
         </div>
-        <div class="tab-pane fade show active" id="french_title" role="tabpanel" aria-labelledby="french-title-tab">
-            <input type="text" class="form-control" id="french_title_input" name="french_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+        <div class="tab-pane fade show active" id="fr_title" role="tabpanel" aria-labelledby="french-title-tab">
+            <input type="text" class="form-control" id="fr_title_input" name="fr_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
         </div>
     </div>
 </div>
@@ -105,10 +105,10 @@
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="french" role="tabpanel" aria-labelledby="french-tab">
-            <textarea class="form-control" id="french_content" name="french_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+            <textarea class="form-control" id="fr_content" name="fr_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
         </div>
         <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
-            <textarea class="form-control" id="english_content" name="english_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
+            <textarea class="form-control" id="en_content" name="en_content" rows="8" placeholder="@lang('base.forum_create.content_post_placeholder')" required></textarea>
         </div>
     </div>
 </div>

@@ -42,7 +42,7 @@ class ForumController extends Controller
         $user = Auth::user();
   
         //Créer un tableau forumData avec les champs 'title' et 'content' et ajouter le champ 'user_id' avec l'id de l'utilisateur connecté
-        $forumData = array_merge($request->only('french_title', 'french_content', 'english_title','english_content'), ['user_id' => $user->id]);
+        $forumData = array_merge($request->only('fr_title', 'fr_content', 'en_title','en_content'), ['user_id' => $user->id]);
         
        
   
