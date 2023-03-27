@@ -3,11 +3,11 @@
 @section('content')
 <!-- contenue -->
 
-<div class="container">
+<div class="container d-flex flex-column">
 
     <h1 class="text-center py-4">@lang('base.forum.title')</h1>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
         @foreach ($postlists as $post)
         <div class="col p-2">
             <small class="text-muted">
@@ -39,7 +39,7 @@
             @if($post->en_title == null || $post->en_content == null)
             <div class="card-body text-center">
                     <h5 class="card-title">No translation...</h5>
-                    <p class="card-text">Sadly, there isnt a translation for this article yet.</p>
+                    <p class="card-text">Sadly, there isnt a translation for this article yet..</p>
                 </div>
 
             @else 
@@ -89,9 +89,15 @@
         @endforeach
     </div>
 
-
+    <div class="pt-5 mx-auto"> <!-- bootstrap skills -10000 -->
+        <div class="pt-5">
+            <div class="pt-5">
+                <div class="mx-auto pt-5"> {{$postlists}}</div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>{{$postlists}}</div>
+
 
 
 <!-- <///// contenue -->
