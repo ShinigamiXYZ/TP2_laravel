@@ -9,9 +9,12 @@ class Forum extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'content',
-        'user_id'
+        'fr_title',
+        'fr_content',
+        'en_title',
+        'en_content',
+        'user_id',
+
     ];
 
     public function comments()

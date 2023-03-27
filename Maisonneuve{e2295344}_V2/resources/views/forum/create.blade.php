@@ -14,13 +14,34 @@
             @csrf
           @method('PUT')
                 
+        
+
+                @if (app()->getLocale() == 'en') <!-- Si le site est en anglais -->
+
+                <!-- titre en/fr -->
                 <div class="mb-3">
                     <label for="title" class="form-label">@lang('base.forum_create.title_post')</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                    <ul class="nav nav-tabs" id="titleTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#english_title" type="button" role="tab" aria-controls="english_title" aria-selected="true">English</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#french_title" type="button" role="tab" aria-controls="french_title" aria-selected="false">French</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="titleTabContent">
+                        <div class="tab-pane fade show active" id="english_title" role="tabpanel" aria-labelledby="english-title-tab">
+                            <input type="text" class="form-control" id="english_title_input" name="english_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                        </div>
+                        <div class="tab-pane fade" id="french_title" role="tabpanel" aria-labelledby="french-title-tab">
+                            <input type="text" class="form-control" id="french_title_input" name="french_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+                        </div>
+                    </div>
                 </div>
-                
+                 <!-- <///  titre en/fr -->
 
-                @if (app()->getLocale() == 'en')
+
+                  <!-- contenue en/fr -->
                 <div class="mb-3">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -39,9 +60,38 @@
                         </div>
                     </div>
                 </div>
+       <!-- <///  contenue en/fr -->
+                @elseif (app()->getLocale() == 'fr') <!-- si le site est en francais -->
+     
+                <div class="mb-3">
+    <label for="title" class="form-label">@lang('base.forum_create.title_post')</label>
+    <ul class="nav nav-tabs" id="titleTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="english-title-tab" data-bs-toggle="tab" data-bs-target="#english_title" type="button" role="tab" aria-controls="english_title" aria-selected="false">English</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="french-title-tab" data-bs-toggle="tab" data-bs-target="#french_title" type="button" role="tab" aria-controls="french_title" aria-selected="true">French</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="titleTabContent">
+        <div class="tab-pane fade" id="english_title" role="tabpanel" aria-labelledby="english-title-tab">
+            <input type="text" class="form-control" id="english_title_input" name="english_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+        </div>
+        <div class="tab-pane fade show active" id="french_title" role="tabpanel" aria-labelledby="french-title-tab">
+            <input type="text" class="form-control" id="french_title_input" name="french_title" placeholder="@lang('base.forum_create.title_post_placeholder')" required>
+        </div>
+    </div>
+</div>
 
-                @elseif (app()->getLocale() == 'fr')
+  <!-- <<</////   titre fr/en -->
 
+
+
+
+
+
+
+<!-- conteneu fr/en -->
                 <div class="mb-3">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
@@ -60,7 +110,7 @@
         </div>
     </div>
 </div>
-
+<!--<< //// conteneu fr/en -->
     @endif
 
 
