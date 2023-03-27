@@ -21,17 +21,33 @@
             </small>
             <div class="card h-100 shadow-sm border-0 rounded">
             @if (app()->getLocale() == 'fr') 
+            @if($post->fr_title == null || $post->fr_content == null)
+                <div class="card-body text-center">
+                    <h5 class="card-title">Aucune traduction... </h5>
+                    <p class="card-text">Aucune traduction ne fut créer par l'utilsateurs pour l'intant concernant cette article. </p>
+                </div>
+            
+            @else
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $post->fr_title }}</h5>
                     <p class="card-text">{{ $post->fr_content }}</p>
                 </div>
             
+            @endif
+            
+            @elseif (app()->getLocale() == 'en')
+            @if($post->en_title == null || $post->en_content == null)
+            <div class="card-body text-center">
+                    <h5 class="card-title">No translation...</h5>
+                    <p class="card-text">Sadly, there isnt a translation for this article yet.</p>
+                </div>
+
             @else 
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $post->en_title }}</h5>
                     <p class="card-text">{{ $post->en_content }}</p>
                 </div>
-
+            @endif
             
 
                 @endif
