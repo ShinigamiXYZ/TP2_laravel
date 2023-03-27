@@ -20,10 +20,21 @@
 
             </small>
             <div class="card h-100 shadow-sm border-0 rounded">
+            @if (app()->getLocale() == 'fr') 
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ $post->fr_title }}</h5>
+                    <p class="card-text">{{ $post->fr_content }}</p>
+                </div>
+            
+            @else 
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ $post->en_title }}</h5>
                     <p class="card-text">{{ $post->en_content }}</p>
                 </div>
+
+            
+
+                @endif
                 <div class="card-footer bg-white">
                     <small class="text-muted">{{ $post->created_at->diffForHumans() }}</small>
                 </div>
