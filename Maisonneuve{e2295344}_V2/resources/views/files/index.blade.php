@@ -53,7 +53,7 @@
                     <tr>
                         <td>{{ $file->name }}</td>
                         <td>
-                            <a href="#" class="btn btn-info">@lang('base.files.visualise')</a>
+                            <a href="{{ asset('storage/uploads/' . $file->file_path) }}" target="_blank" class="btn btn-info">@lang('base.files.visualise')</a>
                             <a href="/files/download/{{ $file->id }}" class="btn btn-success">@lang('base.files.download')</a>
 
                             @if ($file->user_id == Auth::id())
