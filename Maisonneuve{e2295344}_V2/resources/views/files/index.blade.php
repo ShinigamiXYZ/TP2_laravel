@@ -54,9 +54,9 @@
                         <td>{{ $file->name }}</td>
                         <td>
                             <!-- https://laracasts.com/discuss/channels/general-discussion/how-to-check-if-string-is-begin-with-http-or-not-in-blade -->
-                        @if (Str::contains($file->file_path, '.pdf'))
+                      <!--   @if (Str::contains($file->file_path, '.pdf'))  -->
                 <a href="{{ asset('storage/uploads/' . $file->file_path) }}" target="_blank" class="btn btn-info">@lang('base.files.visualise')</a>
-            @endif
+           <!--  @endif -->
                             <a href="/files/download/{{ $file->id }}" class="btn btn-success">@lang('base.files.download')</a>
 
                             @if ($file->user_id == Auth::id())
