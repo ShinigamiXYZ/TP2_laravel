@@ -57,22 +57,22 @@
                             <a href="/files/download/{{ $file->id }}" class="btn btn-success">@lang('base.files.download')</a>
 
                             @if ($file->user_id == Auth::id())
-                            <!-- update -->
+                     
                             <form method="POST" class="d-inline">
                                 @csrf
                                 @method('POST')
                                 <input type="hidden" name="id" value="{{ $file->id }}">
-                                <!-- Button trigger modal -->
+                     
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update">
                                     @lang('base.files.update')</button>
                                 @include('modal.update')
                             </form>
-                            <!-- delete -->
+                    
                             <form method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <input type="hidden" name="id" value="{{ $file->id }}">
-                                <!-- Button trigger modal -->
+                              
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
                                     @lang('base.files.delete')</button>
                                 @include('modal.delete')
