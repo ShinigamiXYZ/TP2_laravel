@@ -92,6 +92,10 @@ class ForumController extends Controller
                 'fr_content' => 'nullable|string|max:250',
             ]);
         }
+
+        /* variation de la validation basé sur le langage local demandé par l'utilisateurs */
+        /* si fr seuleemnt la section fr est requise et liaison de titre et content */
+        /* contraire si anglais */
         
         $forumData =$request->only('fr_title', 'fr_content', 'en_title','en_content');
      
