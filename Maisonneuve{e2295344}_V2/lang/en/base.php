@@ -20,6 +20,8 @@ return [
         'title' => 'Forum',
         'add_comment' => 'Add a comment',
         'comment'  => 'Comment',
+        'edit' => 'edit',
+        'delete' => 'delete',
     ],
 
     'forum_create' => [

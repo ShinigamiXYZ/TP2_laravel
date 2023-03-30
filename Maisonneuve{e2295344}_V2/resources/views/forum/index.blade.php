@@ -13,7 +13,18 @@
             <small class="text-muted">
             @foreach ($students as $student)
                         @if ($student->users_id == $post->user_id)
-                       {{ $student->name }}
+                       <div>{{ $student->name }}</div>
+                       
+                       @if (Auth::user()->id == $post->user_id)
+                          <div class="d-flex justify-content-end">
+                            <a href="{{ route('forum.show', $post->id) }}" class="btn btn-primary btn-sm">@lang('base.forum.edit')</a>
+                            <form action="{{ route('forum.destroy', $post->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">@lang('base.forum.delete')</button>
+                            </form>
+                            </div>
+                            @endif
                         @endif
                         @endforeach
 

@@ -32,6 +32,9 @@ Route::delete('edit/{studentId}', [StudentController::class, 'destroy'])->name('
 
 Route::get('/forum', [ForumController::class, 'index'])->name('forum.index')->middleware('auth');
 Route::put('/forum', [ForumController::class, 'addcomment'])->name('forum.index')->middleware('auth');
+Route::get('/forum/show/{postId}', [ForumController::class, 'show'])->name('forum.show')->middleware('auth');
+Route::put('/forum/show/{postId}', [ForumController::class, 'update'])->name('forum.update')->middleware('auth');
+Route::delete('/forum/destroy/{postId}', [ForumController::class, 'destroy'])->name('forum.destroy')->middleware('auth');
 Route::get('/publish', [ForumController::class, 'create'])->name('forum.create')->middleware('auth');
 Route::put('/publish', [ForumController::class, 'store'])->name('forum.create')->middleware('auth');
 
@@ -43,7 +46,5 @@ Route::delete('files', [FileController::class, 'destroy'])->name('files.delete')
 Route::post('files', [FileController::class, 'update'])->name('files.update')->middleware('auth'); 
 Route::get('files/download/{fileId}', [FileController::class, 'download'])->name('files.download')->middleware('auth'); 
 
-
-Route::get('files/{fileId}/PDF', [FileController::class, 'showPdf']);
 
 Route::get('lang/{locale}', [LocalisationController::class, 'index'])->name('lang'); 

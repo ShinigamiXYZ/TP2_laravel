@@ -21,6 +21,8 @@ return [
         'title' => 'Forum',
         'add_comment' => 'Ajouter un commentaire',
         'comment'  => 'Commenter',
+        'edit' => 'Modifier',
+        'delete' => 'Supprimer',
     ],
 
     'forum_create' => [ 

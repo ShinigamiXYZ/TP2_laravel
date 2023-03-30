@@ -71,6 +71,60 @@ class ForumController extends Controller
         return redirect()->route('forum.index');
     }
 
+    public function update(Request $request, $id)
+    {
+
+     
+        $forum = Forum::find($id);  
+
+        if (app()->getLocale() == 'fr') {
+            $request->validate([
+                'fr_title' => 'required_with:fr_content|string|max:30',
+                'fr_content' => 'required_with:fr_title|string|max:250',
+                'en_title' => 'nullable|string|max:30',
+                'en_content' => 'nullable|string|max:250',
+            ]);
+        } elseif (app()->getLocale() == 'en') {
+            $request->validate([
+                'en_title' => 'required_with:en_content|string|max:30',
+                'en_content' => 'required_with:en_title|string|max:250',
+                'fr_title' => 'nullable|string|max:30',
+                'fr_content' => 'nullable|string|max:250',
+            ]);
+        }
+        
+        $forumData =$request->only('fr_title', 'fr_content', 'en_title','en_content');
+     
+        $forum->update($forumData);
+        
+         return redirect()->route('forum.index');
+
+
+    }
+
+
+
+
+    public function show($id){
+
+        $post = Forum::find($id);
+
+        //Renvoyer la vue 'forum.show' avec le post et les commentaires récupérés
+        return view('forum.show', ['post' => $post]);
+    }
+    
+    public function destroy($id)
+    {
+
+        //Récupérer le post avec l'id récupéré
+        $post = Forum::find($id);
+
+        //Supprimer le post récupéré
+        $post->delete();
+
+        //Rediriger vers la page principale du forum 
+        return redirect()->route('forum.index');
+    }
 
     public function addcomment(Request $request)
     {
