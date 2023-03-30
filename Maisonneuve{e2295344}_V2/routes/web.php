@@ -43,4 +43,7 @@ Route::delete('files', [FileController::class, 'destroy'])->name('files.delete')
 Route::post('files', [FileController::class, 'update'])->name('files.update')->middleware('auth'); 
 Route::get('files/download/{fileId}', [FileController::class, 'download'])->name('files.download')->middleware('auth'); 
 
+
+Route::get('files/{fileId}/PDF', [FileController::class, 'showPdf']);
+
 Route::get('lang/{locale}', [LocalisationController::class, 'index'])->name('lang'); 
